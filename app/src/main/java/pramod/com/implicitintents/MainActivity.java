@@ -3,6 +3,7 @@ package pramod.com.implicitintents;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -18,5 +19,15 @@ public class MainActivity extends AppCompatActivity {
 
         url = findViewById(R.id.editTextTextPersonName);
         btn = findViewById(R.id.button2);
+        
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openURL();
+            }
+        }); 
+    }
+
+    private void openURL() {
     }
 }
