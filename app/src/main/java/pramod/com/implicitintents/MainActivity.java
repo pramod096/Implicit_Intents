@@ -46,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
     private void openMaps() {
         Intent m = new Intent();
         m.setAction(Intent.ACTION_VIEW);
+        String add = maps.getText().toString();
+        m.setData(Uri.parse("geo:0,0?q="+add));
+
+        startActivity(m);
     }
 
     private void openURL() {
